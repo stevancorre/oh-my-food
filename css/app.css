@@ -28,6 +28,16 @@ a:active {
     height: 2em;
 }
 
+.app-header-return-button {
+    position: absolute;
+    left: 0.75em;
+    top: 1em;
+
+    padding: 0.5em;
+
+    font-size: 1.2em;
+}
+
 /* FOOTER */
 .app-footer {
     padding: 1.5em 1.5em 2em 1.5em;
