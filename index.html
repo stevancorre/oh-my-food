@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/home.css">
-    
+
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 
@@ -23,7 +23,9 @@
 </head>
 
 <body>
-    <header class="app-header"><img src="./images/logo.svg" alt="Logo OhMyFood"></header>
+    <header class="app-header">
+        <img class="app-header-logo" src="./images/logo.svg" alt="Logo OhMyFood!">
+    </header>
 
     <main>
         <section class="location">
@@ -32,85 +34,116 @@
         </section>
 
         <section class="presentation">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exception sélectionnés par nos soins.</p>
+            <h2 class="presentation-title">Réservez le menu qui <br> vous convient</h2>
+            <p class="presentation-text">Découvrez des restaurants d'exception sélectionnés par nos soins.</p>
 
-            <a href="#restaurants">Explorer nos restaurants</a>
+            <a class="presentation-button" href="#restaurants">Explorer nos restaurants</a>
         </section>
 
         <section class="tutorial">
-            <div class="tutorial-card">
-                <i class="fas fa-mobile-alt"></i> Choisissez un restaurant
-            </div>
+            <h2 class="tutorial-title">Fonctionnement</h2>
 
-            <div class="tutorial-card">
-                <i class="fas fa-list"></i> Composez votre menu
-            </div>
+            <div class="tutorial-cards">
+                <div class="tutorial-card">
+                    <i class="tutorial-card-icon fas fa-mobile-alt"></i>
+                    <span class="tutorial-card-text">Choisissez un restaurant</span>
+                </div>
 
-            <div class="tutorial-card">
-                <i class="fas fa-store"></i> Dégustez au restaurant
+                <div class="tutorial-card">
+                    <i class="tutorial-card-icon fas fa-list"></i>
+                    <span class="tutorial-card-text">Composez votre menu</span>
+                </div>
+
+                <div class="tutorial-card">
+                    <i class="tutorial-card-icon fas fa-store"></i>
+                    <span class="tutorial-card-text">Dégustez au restaurant</span>
+                </div>
             </div>
         </section>
 
         <section class="restaurants" id="restaurants">
-            <h1>Restaurants</h1>
+            <h2 class="restaurants-title">Restaurants</h2>
 
             <div class="restaurant-cards">
-                <div class="restaurant-card">
+                <a class="restaurant-card" href="pages/la-palette-du-gout.html">
                     <img class="restaurant-card-image" src="./images/restaurants/la-palette-du-gout.jpg" alt="Image la palette du gout">
+                    <span class="restaurant-card-badge">Nouveau</span>
                     <div class="restaurant-card-body">
                         <div class="restaurant-card-data">
-                            <p class="has-text-bold">La palette du goût</p>
-                            <p>Ménilmontant</p>
+                            <p class="restaurant-card-name">La palette du goût</p>
+                            <p class="restaurant-card-location">Ménilmontant</p>
                         </div>
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div>
 
-                <div class="restaurant-card">
+                        <input class="restaurant-card-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle-1">
+                        <label class="restaurant-card-like-label" for="like-toggle-1"><i class="far fa-heart"></i></label>
+                    </div>
+                </a>
+
+                <a class="restaurant-card" href="pages/la-note-enchantee.html">
                     <img class="restaurant-card-image" src="./images/restaurants/la-note-enchantee.jpg" alt="Image la palette du gout">
+                    <span class="restaurant-card-badge">Nouveau</span>
                     <div class="restaurant-card-body">
                         <div class="restaurant-card-data">
-                            <p class="has-text-bold">La note enchantée</p>
-                            <p>Charonne</p>
+                            <p class="restaurant-card-name">La note enchantée</p>
+                            <p class="restaurant-card-location">Charonne</p>
                         </div>
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div>
 
-                <div class="restaurant-card">
-                    <img class="restaurant-card-image" src="./images/restaurants/a-la-française.jpg" alt="Image la palette du gout">
+                        <input class="restaurant-card-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle-2">
+                        <label class="restaurant-card-like-label" for="like-toggle-2"><i class="far fa-heart"></i></label>
+                    </div>
+                </a>
+
+                <a class="restaurant-card" href="pages/a-la-francaise.html">
+                    <img class="restaurant-card-image" src="./images/restaurants/a-la-francaise.jpg" alt="Image la palette du gout">
                     <div class="restaurant-card-body">
                         <div class="restaurant-card-data">
-                            <p class="has-text-bold">À la française</p>
-                            <p>Cité rouge</p>
+                            <p class="restaurant-card-name">À la française</p>
+                            <p class="restaurant-card-location">Cité rouge</p>
                         </div>
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div>
 
-                <div class="restaurant-card">
+                        <input class="restaurant-card-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle-3">
+                        <label class="restaurant-card-like-label" for="like-toggle-3"><i class="far fa-heart"></i></label>
+                    </div>
+                </a>
+
+                <a class="restaurant-card" href="pages/le-delice-des-sens">
                     <img class="restaurant-card-image" src="./images/restaurants/le-delice-des-sens.jpg" alt="Image la palette du gout">
                     <div class="restaurant-card-body">
                         <div class="restaurant-card-data">
-                            <p class="has-text-bold">Le délice des sens</p>
-                            <p>Folie-Méricourt</p>
+                            <p class="restaurant-card-name">Le délice des sens</p>
+                            <p class="restaurant-card-location">Folie-Méricourt</p>
                         </div>
-                        <i class="far fa-heart"></i>
+
+                        <input class="restaurant-card-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle-4">
+                        <label class="restaurant-card-like-label" for="like-toggle-4"><i class="far fa-heart"></i></label>
                     </div>
-                </div>
-                </di v>
+                </a>
             </div>
         </section>
     </main>
 
     <footer class="app-footer">
-        <h4>ohmyfood</h4>
+        <img class="app-footer-logo" src="./images/logo-white.svg" alt="Logo OhMyFood!">
 
-        <a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a>
-        <a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+        <ul class="app-footer-links">
+            <li class="app-footer-link has-icon">
+                <i class="app-footer-link-icon fas fa-utensils"></i>
+                <a class="app-footer-link-text" href="#">Proposer un restaurant</a>
+            </li>
+
+            <li class="app-footer-link has-icon">
+                <i class="app-footer-link-icon fas fa-hands-helping"></i>
+                <a class="app-footer-link-text" href="#"> Devenir partenaire</a>
+            </li>
+
+            <li class="app-footer-link">
+                <a class="app-footer-link-text" href="#">Mentions légales</a>
+            </li>
+
+            <li class="app-footer-link">
+                <a class="app-footer-link-text" href="#">Contact</a>
+            </li>
+        </ul>
     </footer>
 </body>
 
