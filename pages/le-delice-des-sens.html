@@ -4,11 +4,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/menu.css">
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+
     <title>Le décile des sens | Oh My Food!</title>
 </head>
 
 <body>
-    <p>Ok</p>
+    <header class="app-header">
+        <a class="app-header-return-button" href="../index.html"><i class="fas fa-arrow-left"></i></a>
+        <img class="app-header-logo" src="../images/logo.svg" alt="Logo OhMyFood!">
+    </header>
+
+    <main>
+        <img class="menu-thumbnail" src="../images/restaurants/la-palette-du-gout.jpg" alt="Image la palette du goût">
+
+        <section class="menu">
+            <header class="menu-header">
+                <h1 class="menu-header-title">Le délice des sens</h1>
+
+                <input class="menu-header-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle">
+                <label class="menu-header-like-label" for="like-toggle"><i class="far fa-heart"></i></label>
+            </header>
+
+            <section class="menu-categories">
+                <section class="menu-category">
+                    <h2 class="menu-category-title">Entrées</h2>
+
+                    <ul class="menu-category-cards">
+                        <li class="menu-category-card">
+                            <p class="menu-category-card-meal">Tartare de thon</p>
+                            <div class="menu-category-card-data">
+                                <p class="menu-category-card-description">Assaisonné au yuzu</p>
+                                <span class="menu-category-card-price">25€</span>
+                            </div>
+                        </li>
+
+                        <li class="menu-category-card">
+                            <p class="menu-category-card-meal">Bouchée de homard croustillant</p>
+                            <div class="menu-category-card-data">
+                                <p class="menu-category-card-description">Et sa farandole de petits légumes</p>
+                                <span class="menu-category-card-price">35€</span>
+                            </div>
+                        </li>
+
+                        <li class="menu-category-card">
+                            <p class="menu-category-card-meal">Velouté de cèpes</p>
+                            <div class="menu-category-card-data">
+                                <p class="menu-category-card-description">Aux truffes</p>
+                                <span class="menu-category-card-price">20€</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-category">
+                    <h2 class="menu-category-title">Plats</h2>
+
+                    <ul class="menu-category-cards">
+                        <li class="menu-category-card">
+                            <p class="menu-category-card-meal">Poulet rôti aux herbes de Provence</p>
+                            <div class="menu-category-card-data">
+                                <p class="menu-category-card-description">Et sa crème de truffe</p>
+                                <span class="menu-category-card-price">40€</span>
+                            </div>
+                        </li>
+
+                        <li class="menu-category-card">
+                            <p class="menu-category-card-meal">Langouste rôtie</p>
+                            <div class="menu-category-card-data">
+                                <p class="menu-category-card-description">Et ses légumes de saison</p>
+                                <span class="menu-category-card-price">35€</span>
+                            </div>
+                        </li>
+
+                        <li class="menu-category-card">
+                            <p class="menu-category-card-meal">Côte de boeuf Angus</p>
+                            <div class="menu-category-card-data">
+                                <p class="menu-category-card-description">Et sa purée de panais</p>
+                                <span class="menu-category-card-price">44€</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="menu-category">
+                    <h2 class="menu-category-title">Desserts</h2>
+
+                    <ul class="menu-category-cards">
+                        <li class="menu-category-card">
+                            <p class="menu-category-card-meal">Farandole de desserts</p>
+                            <div class="menu-category-card-data">
+                                <p class="menu-category-card-description">Du chef</p>
+                                <span class="menu-category-card-price">18€</span>
+                            </div>
+                        </li>
+
+                        <li class="menu-category-card">
+                            <p class="menu-category-card-meal">Crème brulée</p>
+                            <div class="menu-category-card-data">
+                                <p class="menu-category-card-description">Revisitée</p>
+                                <span class="menu-category-card-price">22€</span>
+                            </div>
+                        </li>
+
+                        <li class="menu-category-card">
+                            <p class="menu-category-card-meal">Tiramisu</p>
+                            <div class="menu-category-card-data">
+                                <p class="menu-category-card-description">À la noisette</p>
+                                <span class="menu-category-card-price">23€</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+        <a class="menu-order-button" href="#">Commander</a>
+    </main>
+
+    <footer class="app-footer">
+        <img class="app-footer-logo" src="../images/logo-white.svg" alt="Logo OhMyFood!">
+
+        <ul class="app-footer-links">
+            <li class="app-footer-link has-icon">
+                <i class="app-footer-link-icon fas fa-utensils"></i>
+                <a class="app-footer-link-text" href="#">Proposer un restaurant</a>
+            </li>
+
+            <li class="app-footer-link has-icon">
+                <i class="app-footer-link-icon fas fa-hands-helping"></i>
+                <a class="app-footer-link-text" href="#"> Devenir partenaire</a>
+            </li>
+
+            <li class="app-footer-link">
+                <a class="app-footer-link-text" href="#">Mentions légales</a>
+            </li>
+
+            <li class="app-footer-link">
+                <a class="app-footer-link-text" href="#">Contact</a>
+            </li>
+        </ul>
+    </footer>
 </body>
 
 </html>
