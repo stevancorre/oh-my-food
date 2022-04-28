@@ -1,0 +1,17 @@
+{
+  "name": "project-3",
+  "description": "This project is an [OpenClassrooms](https://openclassrooms.com) assigment.",
+  "scripts": {
+    "scss:watch": "npm run build && node-sass --watch ./scss -o ./css & open-cli ./index.html",
+    "build": "node-sass ./scss -o ./css",
+    "start": "npm run build && open-cli ./index.html"
+  },
+  "author": "Stévan Corre <stevancorre@protonmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "open-cli": "^7.0.1"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
