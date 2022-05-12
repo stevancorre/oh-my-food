@@ -24,7 +24,7 @@
 
     text-align: center;
 
-    background-color: #f6f6f6;
+    background-color: $light-gray;
 
     &-title {
         font-size: 1.5em;
@@ -93,7 +93,7 @@
 
         border-radius: 1.25em;
 
-        background-color: #f6f6f6;
+        background-color: $light-gray;
         box-shadow: 0.25em 0.25em 0.5rem #00000020;
 
         &::before {
@@ -133,7 +133,7 @@
 .restaurants {
     padding: 2.5em 1em 4em 1em;
 
-    background-color: #f6f6f6;
+    background-color: $light-gray;
 
     &-title {
         font-size: 1.5em;
@@ -169,7 +169,7 @@
             display: block;
 
             border-radius: 1em;
-            background-color: #ffffff;
+            background-color: $white;
             box-shadow: 0.25em 0.25em 0.75em #0000001a;
 
             &-image {
