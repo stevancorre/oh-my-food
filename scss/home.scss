@@ -1,4 +1,5 @@
 @import "theme.scss";
+@import "mixins.scss";
 
 /* LOCATION */
 .location {
@@ -12,7 +13,7 @@
 
     &-text {
         margin-left: 0.7em;
-    
+
         font-weight: 500;
     }
 }
@@ -32,7 +33,7 @@
 
     &-text {
         margin: 0.8em 0 2.5em 0;
-    
+
         font-size: 1.1em;
         font-weight: 300;
         line-height: 1.2em;
@@ -40,15 +41,15 @@
 
     &-button {
         padding: 1em 1.5em;
-    
+
         font-weight: 500;
-    
+
         border-radius: 100px;
-    
+
         color: #ffffff;
         background: linear-gradient($secondary, $primary);
         box-shadow: 0 0.2em 10px #00000060;
-    
+
         cursor: pointer;
     }
 }
@@ -59,6 +60,11 @@
 
     counter-reset: tutorial_card_index;
 
+    @include xl {
+        width: $xl-width;;
+        margin: 0 auto;
+    }
+
     &-title {
         font-size: 1.5em;
         font-weight: 800;
@@ -66,34 +72,45 @@
 
     &-cards {
         padding: 1em 0.2em 2em 1em;
+
+        display: flex;
+        flex-direction: column;
+
+        @include lg {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 2em;
+        }
     }
 
     &-card {
         position: relative;
-    
+
+        flex: 1;
+
         margin-top: 1em;
         padding: 1.5em 2em;
-    
+
         border-radius: 1.25em;
-    
+
         background-color: #f6f6f6;
         box-shadow: 0.25em 0.25em 0.5rem #00000020;
 
         &::before {
             counter-increment: tutorial_card_index;
             content: counter(tutorial_card_index);
-        
+
             position: absolute;
             left: -0.75em;
             top: 1.5em;
-        
+
             width: 1.4em;
             height: 1.4em;
-        
+
             color: #ffffff;
             background: $primary;
             border-radius: 100%;
-        
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -102,7 +119,7 @@
         &-icon {
             width: 1em;
             margin-right: 1em;
-        
+
             color: #7e7e7e;
         }
 
@@ -121,74 +138,97 @@
     &-title {
         font-size: 1.5em;
         font-weight: 800;
+
+        margin-bottom: 1.5em;
+
+        @include xl {
+            width: $xl-width;
+
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 
-    & .restaurant-card {
-        margin-top: 2em;
-    
-        position: relative;
-        display: block;
-    
-        border-radius: 1em;
-        background-color: #ffffff;
-        box-shadow: 0.25em 0.25em 0.75em #0000001a;
-    
-        &-image {
-            height: 11em;
-            width: 100%;
-        
-            border-radius: 1em 1em 0 0;
-        
-            object-fit: cover;
+    & .restaurant-cards {
+        display: grid;
+        grid-column-gap: 2em;
+        grid-row-gap: 2em;
+
+        @include lg {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
         }
-    
-        &-badge {
-            position: absolute;
-            top: 0.75em;
-            right: 0.75em;
-        
-            padding: 0.5rem;
-        
-            font-weight: 500;
-            font-size: 0.9em;
-            color: #008766;
-        
-            background-color: $tertiary;
-            border-radius: 0.1em;
+
+        @include xl {
+            width: $xl-width;
+            margin: 0 auto;
         }
-    
-        &-body {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        
-            padding: 0.25em 0 0.25em 1em;
-        }
-    
-        &-name {
-            margin-bottom: 0.3em;
-        
-            font-weight: 700;
-            font-size: 1.2em;
-        }
-    
-        &-location {
-            font-weight: 300;
-            font-size: 1.1em;
-        }
-    
-        .restaurant-card-like {
-            &-checkbox {
-                display: none;
+
+        & .restaurant-card {
+            position: relative;
+            display: block;
+
+            border-radius: 1em;
+            background-color: #ffffff;
+            box-shadow: 0.25em 0.25em 0.75em #0000001a;
+
+            &-image {
+                height: 11em;
+                width: 100%;
+
+                border-radius: 1em 1em 0 0;
+
+                object-fit: cover;
             }
-    
-            &-label {
-                padding: 1em;
-    
-                & i {
-                    font-size: 1.5em;
-                
-                    cursor: pointer;
+
+            &-badge {
+                position: absolute;
+                top: 0.75em;
+                right: 0.75em;
+
+                padding: 0.5rem;
+
+                font-weight: 500;
+                font-size: 0.9em;
+                color: #008766;
+
+                background-color: $tertiary;
+                border-radius: 0.1em;
+            }
+
+            &-body {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                padding: 0.25em 0 0.25em 1em;
+            }
+
+            &-name {
+                margin-bottom: 0.3em;
+
+                font-weight: 700;
+                font-size: 1.2em;
+            }
+
+            &-location {
+                font-weight: 300;
+                font-size: 1.1em;
+            }
+
+            .restaurant-card-like {
+                &-checkbox {
+                    display: none;
+                }
+
+                &-label {
+                    padding: 1em;
+
+                    & i {
+                        font-size: 1.5em;
+
+                        cursor: pointer;
+                    }
                 }
             }
         }
