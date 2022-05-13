@@ -121,7 +121,6 @@ body {
 
         &-card {
             margin-top: 1em;
-            padding: 1em;
 
             border-radius: 1em;
 
@@ -130,6 +129,13 @@ body {
             
             opacity: 0;
             animation: fade-in 0.35s ease-in forwards;
+
+            display: flex;
+            justify-content: space-between;
+
+            overflow: hidden;
+
+            cursor: pointer;
 
             @keyframes fade-in {
                 from {
@@ -147,6 +153,23 @@ body {
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
+            }
+
+            &:hover &-selector {
+                width: 5em;
+
+                & i {
+                    transform: rotateZ(360deg);
+
+                    transition: transform 0.3s linear;
+                }
+            }
+
+            &-body {
+                flex: 1;
+                padding: 1em;
+
+                width: calc(100% - 10em);
             }
 
             &-meal {
@@ -172,10 +195,31 @@ body {
             }
 
             &-price {
-                padding-left: 2em;
+                padding-left: 1em;
 
                 font-size: 0.9em;
                 font-weight: 600;
+            }
+
+            &-selector {
+                width: 0em;
+
+                background: $tertiary;
+                
+                border-radius: 0 1em 1em 0;
+                transition: width 0.3s linear;
+
+                i {
+                    font-size: 1.75em;
+                    color: #ffffff;
+
+                    margin-left: calc(40px - 14px);
+
+                    line-height: 70px;
+                    vertical-align: middle;
+
+                    transition: none;
+                }
             }
         }
     }
