@@ -126,7 +126,7 @@ body {
 
             background-color: $white;
             box-shadow: 0.25em 0.25em 0.5em #00000020;
-            
+
             opacity: 0;
             animation: fade-in 0.35s ease-in forwards;
 
@@ -153,16 +153,6 @@ body {
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
-            }
-
-            &:hover &-selector {
-                width: 5em;
-
-                & i {
-                    transform: rotateZ(360deg);
-
-                    transition: transform 0.3s linear;
-                }
             }
 
             &-body {
@@ -201,13 +191,25 @@ body {
                 font-weight: 600;
             }
 
+            &:hover &-selector {
+                width: 5em;
+
+                & i {
+                    transform: rotateZ(360deg);
+
+                    transition: transform 0.3s linear;
+                }
+            }
+
             &-selector {
                 width: 0em;
 
                 background: $tertiary;
-                
+
                 border-radius: 0 1em 1em 0;
                 transition: width 0.3s linear;
+
+                cursor: pointer;
 
                 i {
                     font-size: 1.75em;
@@ -219,6 +221,18 @@ body {
                     vertical-align: middle;
 
                     transition: none;
+                }
+            }
+
+            input[type="checkbox"] {
+                display: none;
+
+                &:checked+.menu-category-card-selector {
+                    width: 5em;
+
+                    i {
+                        transition: none !important;
+                    }
                 }
             }
         }
