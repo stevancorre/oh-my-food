@@ -4,11 +4,13 @@
   "scripts": {
     "scss:watch": "npm run build && node-sass --watch ./scss -o ./css & open-cli ./index.html",
     "build": "node-sass ./scss -o ./css",
-    "start": "npm run build && open-cli ./index.html"
+    "start": "npm run build && open-cli ./index.html",
+    "zip": "jszip"
   },
   "author": "Stévan Corre <stevancorre@protonmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "jszip-cli": "^1.4.24",
     "open-cli": "^7.0.1"
   },
   "dependencies": {

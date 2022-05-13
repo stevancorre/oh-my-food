@@ -1,0 +1,19 @@
+{
+    "entities": [
+        "css",
+        "pages",
+        "preview",
+        "public",
+        "scss",
+        ".gitignore",
+        "index.html",
+        "jszip.json",
+        "LICENSE",
+        "package-lock.json",
+        "package.json",
+        "README.md"
+    ],
+    "options": {
+        "output": "p3_corre_stevan.zip"
+    }
+}
