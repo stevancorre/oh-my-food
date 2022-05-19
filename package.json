@@ -5,7 +5,7 @@
     "scss:watch": "npm run build && node-sass --watch ./scss -o ./css & open-cli ./index.html",
     "build": "node-sass ./scss -o ./css",
     "start": "npm run build && open-cli ./index.html",
-    "zip": "jszip"
+    "zip": "jszip -c jszip.json"
   },
   "author": "Stévan Corre <stevancorre@protonmail.com>",
   "license": "MIT",
