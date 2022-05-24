@@ -5,11 +5,13 @@
     "scss:watch": "node-sass --watch scss -o dist/css & open-cli dist/index.html",
     "build": "rimraf dist && node-sass scss -o dist/css && smart-copy",
     "start": "npm run build && open-cli dist/index.html",
-    "zip": "jszip -c jszip.json"
+    "zip": "jszip -c jszip.json",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "Stévan Corre <stevancorre@protonmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "jszip-cli": "^1.4.24",
     "node-sass": "^7.0.1",
     "open-cli": "^7.0.1",
