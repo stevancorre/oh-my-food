@@ -1,0 +1,154 @@
+/* LOCATION */
+.location {
+  padding: 1em;
+  background-color: #eaeaea;
+  color: #353535;
+  text-align: center;
+  z-index: -1; }
+  .location-text {
+    margin-left: 0.7em;
+    font-weight: 500; }
+
+/* PRESENTATION */
+.presentation {
+  padding: 3em 2em 4em 2em;
+  text-align: center;
+  background-color: #f6f6f6; }
+  .presentation-title {
+    font-size: 1.5em;
+    font-weight: 800; }
+  .presentation-text {
+    margin: 0.8em 0 2.5em 0;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.2em; }
+  .presentation-button {
+    padding: 1em 1.5em;
+    font-weight: 500;
+    border-radius: 100px;
+    color: #ffffff;
+    background: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 0 0.2em 10px #00000060;
+    cursor: pointer; }
+
+/* TUTORIAL */
+.tutorial {
+  padding: 2em 1em;
+  counter-reset: tutorial_card_index; }
+  @media (min-width: 1440px) {
+    .tutorial {
+      width: 65%;
+      margin: 0 auto; } }
+  .tutorial-title {
+    font-size: 1.5em;
+    font-weight: 800; }
+  .tutorial-cards {
+    padding: 1em 0.2em 2em 1em;
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 992px) {
+      .tutorial-cards {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2em; } }
+  .tutorial-card {
+    position: relative;
+    flex: 1;
+    margin-top: 1em;
+    padding: 1.5em 2em;
+    border-radius: 1.25em;
+    background-color: #f6f6f6;
+    box-shadow: 0.25em 0.25em 0.5rem #00000020; }
+    .tutorial-card::before {
+      counter-increment: tutorial_card_index;
+      content: counter(tutorial_card_index);
+      position: absolute;
+      left: -0.75em;
+      top: 1.5em;
+      width: 1.4em;
+      height: 1.4em;
+      color: #ffffff;
+      background: #9356dc;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .tutorial-card-icon {
+      width: 1em;
+      margin-right: 1em;
+      color: #7e7e7e; }
+    .tutorial-card-text {
+      font-weight: 500; }
+
+/* RESTAURANTS */
+.restaurants {
+  padding: 2.5em 1em 4em 1em;
+  background-color: #f6f6f6; }
+  .restaurants-title {
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 1.5em; }
+    @media (min-width: 1440px) {
+      .restaurants-title {
+        width: 65%;
+        margin-right: auto;
+        margin-left: auto; } }
+  .restaurants .restaurant-cards {
+    display: grid;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em; }
+    @media (min-width: 992px) {
+      .restaurants .restaurant-cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); } }
+    @media (min-width: 1440px) {
+      .restaurants .restaurant-cards {
+        width: 65%;
+        margin: 0 auto; } }
+    .restaurants .restaurant-cards .restaurant-card {
+      position: relative;
+      display: block;
+      border-radius: 1em;
+      background-color: #ffffff;
+      box-shadow: 0.25em 0.25em 0.75em #0000001a; }
+      .restaurants .restaurant-cards .restaurant-card-image {
+        height: 11em;
+        width: 100%;
+        border-radius: 1em 1em 0 0;
+        object-fit: cover; }
+      .restaurants .restaurant-cards .restaurant-card-badge {
+        position: absolute;
+        top: 0.75em;
+        right: 0.75em;
+        padding: 0.5rem;
+        font-weight: 500;
+        font-size: 0.9em;
+        color: #008766;
+        background-color: #99e2d0;
+        border-radius: 0.1em; }
+      .restaurants .restaurant-cards .restaurant-card-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.25em 0 0.25em 1em; }
+      .restaurants .restaurant-cards .restaurant-card-name {
+        margin-bottom: 0.3em;
+        font-weight: 700;
+        font-size: 1.2em; }
+      .restaurants .restaurant-cards .restaurant-card-location {
+        font-weight: 300;
+        font-size: 1.1em; }
+      .restaurants .restaurant-cards .restaurant-card .restaurant-card-like-checkbox {
+        display: none; }
+      .restaurants .restaurant-cards .restaurant-card .restaurant-card-like-label {
+        padding: 1em; }
+        .restaurants .restaurant-cards .restaurant-card .restaurant-card-like-label i {
+          font-size: 1.5em;
+          cursor: pointer; }
+
+.restaurant-card-like-checkbox:checked + .restaurant-card-like-label i {
+  font-weight: 900;
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; }

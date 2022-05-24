@@ -1,0 +1,154 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+
+    <title>Accueil | Oh My Food!</title>
+</head>
+
+<body>
+    <div id="loading">
+        <i class="far fa-heart"></i>
+    </div>
+
+    <header class="app-header">
+        <img class="app-header-logo" src="./public/logo.svg" alt="Logo OhMyFood!">
+    </header>
+
+    <main>
+        <section class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="location-text">Paris, Belleville</span>
+        </section>
+
+        <section class="presentation">
+            <h2 class="presentation-title">Réservez le menu qui <br> vous convient</h2>
+            <p class="presentation-text">Découvrez des restaurants d'exception sélectionnés par nos soins.</p>
+
+            <a class="presentation-button" href="#restaurants">Explorer nos restaurants</a>
+        </section>
+
+        <section class="tutorial">
+            <h2 class="tutorial-title">Fonctionnement</h2>
+
+            <div class="tutorial-cards">
+                <div class="tutorial-card">
+                    <i class="tutorial-card-icon fas fa-mobile-alt"></i>
+                    <span class="tutorial-card-text">Choisissez un restaurant</span>
+                </div>
+
+                <div class="tutorial-card">
+                    <i class="tutorial-card-icon fas fa-list"></i>
+                    <span class="tutorial-card-text">Composez votre menu</span>
+                </div>
+
+                <div class="tutorial-card">
+                    <i class="tutorial-card-icon fas fa-store"></i>
+                    <span class="tutorial-card-text">Dégustez au restaurant</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurants" id="restaurants">
+            <h2 class="restaurants-title">Restaurants</h2>
+
+            <div class="restaurant-cards">
+                <a class="restaurant-card" href="pages/la-palette-du-gout.html">
+                    <img class="restaurant-card-image" src="./public/restaurants/la-palette-du-gout.jpg" alt="Image la palette du gout">
+                    <span class="restaurant-card-badge">Nouveau</span>
+                    <div class="restaurant-card-body">
+                        <div class="restaurant-card-data">
+                            <p class="restaurant-card-name">La palette du goût</p>
+                            <p class="restaurant-card-location">Ménilmontant</p>
+                        </div>
+
+                        <input class="restaurant-card-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle-1">
+                        <label class="restaurant-card-like-label" for="like-toggle-1"><i class="far fa-heart"></i></label>
+                    </div>
+                </a>
+
+                <a class="restaurant-card" href="pages/la-note-enchantee.html">
+                    <img class="restaurant-card-image" src="./public/restaurants/la-note-enchantee.jpg" alt="Image la palette du gout">
+                    <span class="restaurant-card-badge">Nouveau</span>
+                    <div class="restaurant-card-body">
+                        <div class="restaurant-card-data">
+                            <p class="restaurant-card-name">La note enchantée</p>
+                            <p class="restaurant-card-location">Charonne</p>
+                        </div>
+
+                        <input class="restaurant-card-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle-2">
+                        <label class="restaurant-card-like-label" for="like-toggle-2"><i class="far fa-heart"></i></label>
+                    </div>
+                </a>
+
+                <a class="restaurant-card" href="pages/a-la-francaise.html">
+                    <img class="restaurant-card-image" src="./public/restaurants/a-la-francaise.jpg" alt="Image la palette du gout">
+                    <div class="restaurant-card-body">
+                        <div class="restaurant-card-data">
+                            <p class="restaurant-card-name">À la française</p>
+                            <p class="restaurant-card-location">Cité rouge</p>
+                        </div>
+
+                        <input class="restaurant-card-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle-3">
+                        <label class="restaurant-card-like-label" for="like-toggle-3"><i class="far fa-heart"></i></label>
+                    </div>
+                </a>
+
+                <a class="restaurant-card" href="pages/le-delice-des-sens.html">
+                    <img class="restaurant-card-image" src="./public/restaurants/le-delice-des-sens.jpg" alt="Image la palette du gout">
+                    <div class="restaurant-card-body">
+                        <div class="restaurant-card-data">
+                            <p class="restaurant-card-name">Le délice des sens</p>
+                            <p class="restaurant-card-location">Folie-Méricourt</p>
+                        </div>
+
+                        <input class="restaurant-card-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle-4">
+                        <label class="restaurant-card-like-label" for="like-toggle-4"><i class="far fa-heart"></i></label>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <img class="app-footer-logo" src="./public/logo-white.svg" alt="Logo OhMyFood!">
+
+        <ul class="app-footer-links">
+            <li class="app-footer-link has-icon">
+                <i class="app-footer-link-icon fas fa-utensils"></i>
+                <a class="app-footer-link-text" href="#">Proposer un restaurant</a>
+            </li>
+
+            <li class="app-footer-link has-icon">
+                <i class="app-footer-link-icon fas fa-hands-helping"></i>
+                <a class="app-footer-link-text" href="#"> Devenir partenaire</a>
+            </li>
+
+            <li class="app-footer-link">
+                <a class="app-footer-link-text" href="#">Mentions légales</a>
+            </li>
+
+            <li class="app-footer-link">
+                <a class="app-footer-link-text" href="#">Contact</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+body {
+  background-color: #ffffff; }
+
+/* MENU */
+.menu {
+  margin-top: -3em;
+  background-color: #f6f6f6; }
+  @media (min-width: 1440px) {
+    .menu {
+      width: 65%;
+      margin-right: auto;
+      margin-left: auto; } }
+  .menu-thumbnail {
+    width: 100%;
+    max-width: 100%;
+    max-height: 28em;
+    object-fit: cover; }
+  .menu-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.75em;
+    background-color: #f6f6f6;
+    border-radius: 2em 2em 0 0; }
+    .menu-header-title {
+      font-family: "Shrikhand";
+      font-size: 1.5em; }
+    .menu-header-like-checkbox {
+      display: none; }
+      .menu-header-like-checkbox:checked + .menu-header-like-label i {
+        font-weight: 900;
+        background: linear-gradient(#9356dc, #ff79da);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; }
+    .menu-header-like-label {
+      margin: 1em; }
+      .menu-header-like-label i {
+        font-size: 1.5em;
+        cursor: pointer; }
+  .menu-categories {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 1.75em 1.75em 1.75em; }
+    @media (min-width: 992px) {
+      .menu-categories {
+        flex-direction: row; } }
+  .menu-category {
+    margin-top: 2em;
+    width: 100%; }
+    .menu-category article:nth-of-type(1) {
+      animation-delay: calc(0.2s * 1); }
+    .menu-category article:nth-of-type(2) {
+      animation-delay: calc(0.2s * 2); }
+    .menu-category article:nth-of-type(3) {
+      animation-delay: calc(0.2s * 3); }
+    .menu-category article:nth-of-type(4) {
+      animation-delay: calc(0.2s * 4); }
+    .menu-category article:nth-of-type(5) {
+      animation-delay: calc(0.2s * 5); }
+    .menu-category article:nth-of-type(6) {
+      animation-delay: calc(0.2s * 6); }
+    .menu-category article:nth-of-type(7) {
+      animation-delay: calc(0.2s * 7); }
+    .menu-category article:nth-of-type(8) {
+      animation-delay: calc(0.2s * 8); }
+    .menu-category article:nth-of-type(9) {
+      animation-delay: calc(0.2s * 9); }
+    @media (min-width: 992px) {
+      .menu-category {
+        width: 32%; } }
+    .menu-category-title {
+      position: relative;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      /* WATCH HERE :after -> ::after */ }
+      .menu-category-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 2.75em;
+        height: 0.2em;
+        background-color: #99e2d0; }
+    .menu-category-card {
+      margin-top: 1em;
+      border-radius: 1em;
+      background-color: #ffffff;
+      box-shadow: 0.25em 0.25em 0.5em #00000020;
+      opacity: 0;
+      animation: fade-in 0.35s ease-in forwards;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      cursor: pointer; }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+      .menu-category-card p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; }
+      .menu-category-card-body {
+        flex: 1;
+        padding: 1em;
+        width: calc(100% - 10em); }
+      .menu-category-card-meal {
+        font-weight: 600; }
+      .menu-category-card-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end; }
+        .menu-category-card-data div {
+          /* https://bugzilla.mozilla.org/show_bug.cgi?id=1086218#c4 */
+          min-width: 0; }
+      .menu-category-card-description {
+        margin-top: 0.5em;
+        font-size: 0.9em;
+        font-weight: 300; }
+      .menu-category-card-price {
+        padding-left: 1em;
+        font-size: 0.9em;
+        font-weight: 600; }
+      .menu-category-card:hover .menu-category-card-selector {
+        width: 5em; }
+        .menu-category-card:hover .menu-category-card-selector i {
+          transform: rotateZ(360deg);
+          transition: transform 0.3s linear; }
+      .menu-category-card-selector {
+        width: 0em;
+        background: #99e2d0;
+        border-radius: 0 1em 1em 0;
+        transition: width 0.3s linear;
+        cursor: pointer; }
+        .menu-category-card-selector i {
+          font-size: 1.75em;
+          color: #ffffff;
+          margin-left: calc(40px - 14px);
+          line-height: 70px;
+          vertical-align: middle;
+          transition: none; }
+      .menu-category-card input[type="checkbox"] {
+        display: none; }
+        .menu-category-card input[type="checkbox"]:checked + .menu-category-card-selector {
+          width: 5em; }
+          .menu-category-card input[type="checkbox"]:checked + .menu-category-card-selector i {
+            transition: none !important; }
+  .menu-order {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5em 0 2.5em 0;
+    background-color: #f6f6f6; }
+    @media (min-width: 1440px) {
+      .menu-order {
+        width: 65%; } }
+    .menu-order-button {
+      margin: 0 auto;
+      padding: 1em 1.5em;
+      display: block;
+      width: 8em;
+      text-align: center;
+      font-weight: 500;
+      color: #fff;
+      background: linear-gradient(#ff79da, #9356dc);
+      box-shadow: 0 0.2em 10px #00000060;
+      border-radius: 100px;
+      cursor: pointer; }

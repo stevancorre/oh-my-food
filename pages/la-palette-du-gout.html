@@ -1,0 +1,237 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/menu.css">
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+
+    <title>La palette du goût | Oh My Food!</title>
+</head>
+
+<body>
+    <header class="app-header">
+        <a class="app-header-return-button" href="../index.html"><i class="fas fa-arrow-left"></i></a>
+        <img class="app-header-logo" src="../public/logo.svg" alt="Logo OhMyFood!">
+    </header>
+
+    <main>
+        <img class="menu-thumbnail" src="../public/restaurants/la-palette-du-gout.jpg" alt="Image la palette du goût">
+
+        <section class="menu">
+            <header class="menu-header">
+                <h1 class="menu-header-title">La palette du goût</h1>
+
+                <input class="menu-header-like-checkbox" type="checkbox" name="like-toggle" id="like-toggle">
+                <label class="menu-header-like-label" for="like-toggle"><i class="far fa-heart"></i></label>
+            </header>
+
+            <section class="menu-categories">
+                <section class="menu-category">
+                    <h2 class="menu-category-title">Entrées</h2>
+
+                    <div class="menu-category-cards">
+                        <article class="menu-category-card">
+                            <div class="menu-category-card-body">
+                                <p class="menu-category-card-meal">Fricassée d'escargot</p>
+                                <div class="menu-category-card-data">
+                                    <div class="menu-category-card-description">
+                                        <p>Au piment d'espelette</p>
+                                    </div>
+                                    <span class="menu-category-card-price">25€</span>
+                                </div>
+                            </div>
+                            <input id="checkbox-1" type="checkbox">
+                            <label for="checkbox-1" class="menu-category-card-selector">
+                                <i class="fas fa-check-circle"></i>
+                            </label>
+                        </article>
+
+                        <article class="menu-category-card">
+                            <div class="menu-category-card-body">
+                                <p class="menu-category-card-meal">Foie gras de canard mi-cuit</p>
+                                <div class="menu-category-card-data">
+                                    <div class="menu-category-card-description">
+                                        <p>Et ses copeaux de truffe noire</p>
+                                    </div>
+                                    <span class="menu-category-card-price">35€</span>
+                                </div>
+                            </div>
+                            <input id="checkbox-2" type="checkbox">
+                            <label for="checkbox-2" class="menu-category-card-selector">
+                                <i class="fas fa-check-circle"></i>
+                            </label>
+                        </article>
+
+                        <article class="menu-category-card">
+                            <div class="menu-category-card-body">
+                                <p class="menu-category-card-meal">Oeuf au plat</p>
+                                <div class="menu-category-card-data">
+                                    <div class="menu-category-card-description">
+                                        <p>Assaisonné à la truffe sur lit de caviar</p>
+                                    </div>
+                                    <span class="menu-category-card-price">20€</span>
+                                </div>
+                            </div>
+                            <input id="checkbox-3" type="checkbox">
+                            <label for="checkbox-3" class="menu-category-card-selector">
+                                <i class="fas fa-check-circle"></i>
+                            </label>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="menu-category">
+                    <h2 class="menu-category-title">Plats</h2>
+
+                    <div class="menu-category-cards">
+                        <article class="menu-category-card">
+                            <div class="menu-category-card-body">
+                                <p class="menu-category-card-meal">Filet de boeuf aux herbes</p>
+                                <div class="menu-category-card-data">
+                                    <div class="menu-category-card-description">
+                                        <p>Accompagné de sa ribambelle de légumes</p>
+                                    </div>
+                                    <span class="menu-category-card-price">40€</span>
+                                </div>
+                            </div>
+                            <input id="checkbox-4" type="checkbox">
+                            <label for="checkbox-4" class="menu-category-card-selector">
+                                <i class="fas fa-check-circle"></i>
+                            </label>
+                        </article>
+
+                        <article class="menu-category-card">
+                            <div class="menu-category-card-body">
+                                <p class="menu-category-card-meal">Parmentier de queue de boeuf</p>
+                                <div class="menu-category-card-data">
+                                    <div class="menu-category-card-description">
+                                        <p>À la truffe noire sur sa purée de panais</p>
+                                    </div>
+                                    <span class="menu-category-card-price">35€</span>
+                                </div>
+                            </div>
+                            <input id="checkbox-5" type="checkbox">
+                            <label for="checkbox-5" class="menu-category-card-selector">
+                                <i class="fas fa-check-circle"></i>
+                            </label>
+                        </article>
+
+                        <article class="menu-category-card">
+                            <div class="menu-category-card-body">
+                                <p class="menu-category-card-meal">Filet de turbot</p>
+                                <div class="menu-category-card-data">
+                                    <div class="menu-category-card-description">
+                                        <p>Aux agrumes</p>
+                                    </div>
+                                    <span class="menu-category-card-price">44€</span>
+                                </div>
+                            </div>
+                            <input id="checkbox-6" type="checkbox">
+                            <label for="checkbox-6" class="menu-category-card-selector">
+                                <i class="fas fa-check-circle"></i>
+                            </label>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="menu-category">
+                    <h2 class="menu-category-title">Desserts</h2>
+
+                    <div class="menu-category-cards">
+                        <article class="menu-category-card">
+                            <div class="menu-category-card-body">
+                                <p class="menu-category-card-meal">Paris-Brest</p>
+                                <div class="menu-category-card-data">
+                                    <div class="menu-category-card-description">
+                                        <p>Revisité</p>
+                                    </div>
+                                    <span class="menu-category-card-price">18€</span>
+                                </div>
+                            </div>
+                            <input id="checkbox-7" type="checkbox">
+                            <label for="checkbox-7" class="menu-category-card-selector">
+                                <i class="fas fa-check-circle"></i>
+                            </label>
+                        </article>
+
+                        <article class="menu-category-card">
+                            <div class="menu-category-card-body">
+                                <p class="menu-category-card-meal">Macaron au chocolat d'exception</p>
+                                <div class="menu-category-card-data">
+                                    <div class="menu-category-card-description">
+                                        <p>Et glace à la vanille de Madagascar</p>
+                                    </div>
+                                    <span class="menu-category-card-price">22€</span>
+                                </div>
+                            </div>
+                            <input id="checkbox-8" type="checkbox">
+                            <label for="checkbox-8" class="menu-category-card-selector">
+                                <i class="fas fa-check-circle"></i>
+                            </label>
+                        </article>
+
+                        <article class="menu-category-card">
+                            <div class="menu-category-card-body">
+                                <p class="menu-category-card-meal">Mousse au chocolat</p>
+                                <div class="menu-category-card-data">
+                                    <div class="menu-category-card-description">
+                                        <p>Au piment d'Espelette et à la truffe noire</p>
+                                    </div>
+                                    <span class="menu-category-card-price">23€</span>
+                                </div>
+                            </div>
+                            <input id="checkbox-9" type="checkbox">
+                            <label for="checkbox-9" class="menu-category-card-selector">
+                                <i class="fas fa-check-circle"></i>
+                            </label>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </section>
+
+        <div class="menu-order">
+            <a class="menu-order-button" href="#">Commander</a>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <img class="app-footer-logo" src="../public/logo-white.svg" alt="Logo OhMyFood!">
+
+        <ul class="app-footer-links">
+            <li class="app-footer-link has-icon">
+                <i class="app-footer-link-icon fas fa-utensils"></i>
+                <a class="app-footer-link-text" href="#">Proposer un restaurant</a>
+            </li>
+
+            <li class="app-footer-link has-icon">
+                <i class="app-footer-link-icon fas fa-hands-helping"></i>
+                <a class="app-footer-link-text" href="#"> Devenir partenaire</a>
+            </li>
+
+            <li class="app-footer-link">
+                <a class="app-footer-link-text" href="#">Mentions légales</a>
+            </li>
+
+            <li class="app-footer-link">
+                <a class="app-footer-link-text" href="#">Contact</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
