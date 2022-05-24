@@ -1,17 +1,21 @@
 {
     "entities": [
-        "css",
+        ".github",
+        "dist",
         "pages",
         "preview",
         "public",
         "scss",
         ".gitignore",
         "index.html",
+        "gh-pages.txt",
+        "git-repo.txt",
         "jszip.json",
         "LICENSE",
         "package-lock.json",
         "package.json",
-        "README.md"
+        "README.md",
+        "smart-copy.json"
     ],
     "options": {
         "output": "p3_corre_stevan.zip"
