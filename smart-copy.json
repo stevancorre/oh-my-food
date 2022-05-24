@@ -1,0 +1,9 @@
+{
+    "vars": {
+        "outDir": "dist"
+    },
+    "transactions": [
+        "*.html,pages/*.html -> {{outDir}}",
+        "public/**/* -> {{outDir}}"
+    ]
+}

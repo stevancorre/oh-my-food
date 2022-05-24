@@ -2,6 +2,6 @@
 .idea
 
 node_modules
-css
+dist
 
 *.zip

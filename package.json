@@ -2,18 +2,17 @@
   "name": "project-3",
   "description": "This project is an [OpenClassrooms](https://openclassrooms.com) assigment.",
   "scripts": {
-    "scss:watch": "npm run build && node-sass --watch ./scss -o ./css & open-cli ./index.html",
-    "build": "node-sass ./scss -o ./css",
-    "start": "npm run build && open-cli ./index.html",
+    "scss:watch": "node-sass --watch scss -o dist/css & open-cli dist/index.html",
+    "build": "rimraf dist && node-sass scss -o dist/css && smart-copy",
+    "start": "npm run build && open-cli dist/index.html",
     "zip": "jszip -c jszip.json"
   },
   "author": "Stévan Corre <stevancorre@protonmail.com>",
   "license": "MIT",
   "devDependencies": {
     "jszip-cli": "^1.4.24",
-    "open-cli": "^7.0.1"
-  },
-  "dependencies": {
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "open-cli": "^7.0.1",
+    "smart-copy-cli": "^1.0.1"
   }
 }
