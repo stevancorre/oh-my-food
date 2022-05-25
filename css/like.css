@@ -1,0 +1,42 @@
+.like-checkbox {
+  display: none; }
+  .like-checkbox:checked + .like-label .like-label-fill {
+    background-size: 100% 100%; }
+  .like-checkbox:checked + .like-label {
+    animation: like-click 1s forwards ease-out; }
+
+@keyframes like-click {
+  0% {
+    transform: scale(0.9); }
+  20% {
+    transform: scale(0.9); }
+  40% {
+    transform: scale(1.1); }
+  60% {
+    transform: scale(1.1); }
+  80% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+
+.like-label {
+  position: relative;
+  margin: 1em; }
+  .like-label i {
+    font-size: 1.5em; }
+  .like-label-fill {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    background-position: 0 100%;
+    background-size: 100% 0%;
+    transition: background-size 0.4s ease-in-out;
+    transform: scale(1.065);
+    font-weight: 900 !important;
+    background-image: linear-gradient(#9356dc 0%, #ff79da 100%);
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+    .like-label-fill:hover {
+      background-size: 100% 100%; }

@@ -1,3 +1,62 @@
+body {
+  overflow: hidden;
+  animation: loading-screen-overflow 3s forwards step-end; }
+
+@keyframes loading-screen-overflow {
+  to {
+    overflow-y: auto; } }
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  background: #ffffff;
+  animation: loading-screen 3s forwards step-end;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@keyframes loading-screen {
+  to {
+    visibility: hidden; } }
+  #loading i {
+    font-size: 4em;
+    animation: loading-heart-beating 1s infinite, loading-heart 0.5s calc(3s - 0.5s + 0.1s); }
+
+@keyframes loading-heart-beating {
+  0% {
+    transform: scale(0.9); }
+  20% {
+    transform: scale(1); }
+  40% {
+    transform: scale(0.9); }
+  60% {
+    transform: scale(1); }
+  80% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(0.9); } }
+
+@keyframes loading-heart {
+  0% {
+    font-weight: 900;
+    background: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  30% {
+    transform: scale(1.3); }
+  100% {
+    font-weight: 900;
+    background: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0); } }
+
 /* LOCATION */
 .location {
   padding: 1em;
@@ -29,7 +88,11 @@
     color: #ffffff;
     background: linear-gradient(#ff79da, #9356dc);
     box-shadow: 0 0.2em 10px #00000060;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.1s ease-in; }
+    .presentation-button:hover {
+      filter: brightness(1.03);
+      box-shadow: 0 0.2em 10px #00000080; }
 
 /* TUTORIAL */
 .tutorial {
@@ -58,7 +121,14 @@
     padding: 1.5em 2em;
     border-radius: 1.25em;
     background-color: #f6f6f6;
-    box-shadow: 0.25em 0.25em 0.5rem #00000020; }
+    box-shadow: 0.25em 0.25em 0.5rem #00000020;
+    transition: all 0.1s ease-in;
+    cursor: pointer; }
+    .tutorial-card:hover {
+      background-color: #f5edff;
+      box-shadow: 0.25em 0.25em 0.5rem #00000030; }
+      .tutorial-card:hover .tutorial-card-icon {
+        color: #9356dc; }
     .tutorial-card::before {
       counter-increment: tutorial_card_index;
       content: counter(tutorial_card_index);
@@ -76,7 +146,8 @@
     .tutorial-card-icon {
       width: 1em;
       margin-right: 1em;
-      color: #7e7e7e; }
+      color: #7e7e7e;
+      transition: color 0.2s ease-in; }
     .tutorial-card-text {
       font-weight: 500; }
 
@@ -110,7 +181,10 @@
       display: block;
       border-radius: 1em;
       background-color: #ffffff;
-      box-shadow: 0.25em 0.25em 0.75em #0000001a; }
+      box-shadow: 0.25em 0.25em 0.75em #0000001a;
+      transition: box-shadow 0.15s ease-in; }
+      .restaurants .restaurant-cards .restaurant-card:hover {
+        box-shadow: 0.25em 0.25em 0.75em #00000035; }
       .restaurants .restaurant-cards .restaurant-card-image {
         height: 11em;
         width: 100%;
@@ -138,17 +212,3 @@
       .restaurants .restaurant-cards .restaurant-card-location {
         font-weight: 300;
         font-size: 1.1em; }
-      .restaurants .restaurant-cards .restaurant-card .restaurant-card-like-checkbox {
-        display: none; }
-      .restaurants .restaurant-cards .restaurant-card .restaurant-card-like-label {
-        padding: 1em; }
-        .restaurants .restaurant-cards .restaurant-card .restaurant-card-like-label i {
-          font-size: 1.5em;
-          cursor: pointer; }
-
-.restaurant-card-like-checkbox:checked + .restaurant-card-like-label i {
-  font-weight: 900;
-  background: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; }

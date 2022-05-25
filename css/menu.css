@@ -26,19 +26,6 @@ body {
     .menu-header-title {
       font-family: "Shrikhand";
       font-size: 1.5em; }
-    .menu-header-like-checkbox {
-      display: none; }
-      .menu-header-like-checkbox:checked + .menu-header-like-label i {
-        font-weight: 900;
-        background: linear-gradient(#9356dc, #ff79da);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent; }
-    .menu-header-like-label {
-      margin: 1em; }
-      .menu-header-like-label i {
-        font-size: 1.5em;
-        cursor: pointer; }
   .menu-categories {
     display: flex;
     justify-content: space-between;
@@ -92,6 +79,7 @@ body {
       box-shadow: 0.25em 0.25em 0.5em #00000020;
       opacity: 0;
       animation: fade-in 0.35s ease-in forwards;
+      transition: box-shadow 0.1s ease-in;
       display: flex;
       justify-content: space-between;
       overflow: hidden;
@@ -129,6 +117,8 @@ body {
         padding-left: 1em;
         font-size: 0.9em;
         font-weight: 600; }
+      .menu-category-card:hover {
+        box-shadow: 0.25em 0.25em 0.5em #00000030; }
       .menu-category-card:hover .menu-category-card-selector {
         width: 5em; }
         .menu-category-card:hover .menu-category-card-selector i {
@@ -172,4 +162,8 @@ body {
       background: linear-gradient(#ff79da, #9356dc);
       box-shadow: 0 0.2em 10px #00000060;
       border-radius: 100px;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all 0.1s ease-in; }
+      .menu-order-button:hover {
+        filter: brightness(1.03);
+        box-shadow: 0 0.2em 10px #00000080; }
