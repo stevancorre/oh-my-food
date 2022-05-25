@@ -146,6 +146,13 @@ body {
         box-shadow: 0 0.2em 10px #00000060;
 
         cursor: pointer;
+
+        transition: all 0.1s ease-in;
+
+        &:hover {
+            filter: brightness(1.03);
+            box-shadow: 0 0.2em 10px #00000080;
+        }
     }
 }
 
@@ -156,7 +163,8 @@ body {
     counter-reset: tutorial_card_index;
 
     @include xl {
-        width: $xl-width;;
+        width: $xl-width;
+        ;
         margin: 0 auto;
     }
 
@@ -191,6 +199,19 @@ body {
         background-color: $light-gray;
         box-shadow: 0.25em 0.25em 0.5rem #00000020;
 
+        transition: all 0.1s ease-in;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f5edff;
+            box-shadow: 0.25em 0.25em 0.5rem #00000030;
+
+            .tutorial-card-icon {
+                color: $primary;
+            }
+        }
+
         &::before {
             counter-increment: tutorial_card_index;
             content: counter(tutorial_card_index);
@@ -216,6 +237,8 @@ body {
             margin-right: 1em;
 
             color: #7e7e7e;
+
+            transition: color 0.2s ease-in;
         }
 
         &-text {
@@ -266,6 +289,12 @@ body {
             border-radius: 1em;
             background-color: $white;
             box-shadow: 0.25em 0.25em 0.75em #0000001a;
+
+            transition: box-shadow 0.15s ease-in;
+
+            &:hover {
+                box-shadow: 0.25em 0.25em 0.75em #00000035;
+            }
 
             &-image {
                 height: 11em;
