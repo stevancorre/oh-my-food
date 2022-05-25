@@ -215,31 +215,6 @@
                 font-weight: 300;
                 font-size: 1.1em;
             }
-
-            .restaurant-card-like {
-                &-checkbox {
-                    display: none;
-                }
-
-                &-label {
-                    padding: 1em;
-
-                    & i {
-                        font-size: 1.5em;
-
-                        cursor: pointer;
-                    }
-                }
-            }
         }
     }
-}
-
-.restaurant-card-like-checkbox:checked+.restaurant-card-like-label i {
-    font-weight: 900;
-
-    background: linear-gradient($primary, $secondary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }

@@ -43,31 +43,6 @@ body {
             font-family: "Shrikhand";
             font-size: 1.5em;
         }
-
-        &-like {
-            &-checkbox {
-                display: none;
-
-                &:checked+.menu-header-like-label i {
-                    font-weight: 900;
-
-                    background: linear-gradient($primary, $secondary);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
-
-            &-label {
-                margin: 1em;
-
-                & i {
-                    font-size: 1.5em;
-
-                    cursor: pointer;
-                }
-            }
-        }
     }
 
     &-categories {
