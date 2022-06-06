@@ -92,7 +92,7 @@ body {
   to {
     opacity: 1;
     transform: translateY(0); } }
-      .menu-category-card p {
+      .menu-category-card p, .menu-category-card h6 {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap; }

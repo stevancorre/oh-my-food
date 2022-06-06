@@ -1,30 +1,9 @@
-.like-checkbox {
-  display: none; }
-  .like-checkbox:checked + .like-label .like-label-fill {
-    background-size: 100% 100%; }
-  .like-checkbox:checked + .like-label {
-    animation: like-click 1s forwards ease-out; }
-
-@keyframes like-click {
-  0% {
-    transform: scale(0.9); }
-  20% {
-    transform: scale(0.9); }
-  40% {
-    transform: scale(1.1); }
-  60% {
-    transform: scale(1.1); }
-  80% {
-    transform: scale(1); }
-  100% {
-    transform: scale(1); } }
-
-.like-label {
+.like {
   position: relative;
   margin: 1em; }
-  .like-label i {
+  .like i {
     font-size: 1.5em; }
-  .like-label-fill {
+  .like-fill {
     position: absolute;
     left: 0;
     cursor: pointer;
@@ -38,5 +17,5 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
-    .like-label-fill:hover {
+    .like-fill:hover {
       background-size: 100% 100%; }
